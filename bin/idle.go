@@ -16,9 +16,9 @@ func main() {
   lastInputInfo.cbSize = uint32(unsafe.Sizeof(lastInputInfo))
 
   user32 := syscall.MustLoadDLL("user32.dll")
-  kernal32 := syscall.MustLoadDLL("Kernel32.dll")
+  kernel32 := syscall.MustLoadDLL("Kernel32.dll")
   getLastInputInfo := user32.MustFindProc("GetLastInputInfo")
-  getTickCount := kernal32.MustFindProc("GetTickCount")
+  getTickCount := kernel32.MustFindProc("GetTickCount")
 
   tickCount, _, _ := getTickCount.Call()
 
