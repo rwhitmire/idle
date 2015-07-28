@@ -1,5 +1,5 @@
 # idle
-user idle/active events in node.js
+user idle/active events in node.js - only works in windows at the moment.
 
 ```javascript
 var idle = new Idle(90); // 90 seconds
